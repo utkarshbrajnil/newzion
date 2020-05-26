@@ -1,3 +1,5 @@
-subjectivity
 brown
 wordnet
+movie_reviews
+conll2000
+
