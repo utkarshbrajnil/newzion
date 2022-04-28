@@ -8,7 +8,7 @@ import plotly.graph_objs as go
 def TWT_graph(n_clicks,input_value):
     andf = top_results(input_value)
     andf = analyse_sentiment(andf,"text")
-    andf['Date'] = andf.apply(lambda row: str(row.timestamp).split(" ", 1)[0], axis = 1)
+    # andf['Date'] = andf.apply(lambda row: str(row.timestamp).split(" ", 1)[0], axis = 1)
     andf['RoundPolarity'] = round(andf['sentiment'],1)
     andf2 = andf.groupby('Date', as_index=False)[['sentiment']].sum()
     # ansdf3 = ansdf.groupby('RoundPolarity', as_index=False)[['Likes']].sum()
@@ -29,7 +29,7 @@ def TWT_graph(n_clicks,input_value):
     )
 
     data=[]
-    trace_close = go.Scatter(x = list(andf.timestamp),
+    trace_close = go.Scatter(x = list(andf.Date),
                           y=list(andf.sentiment),
                           mode='markers',
                           name="markers",

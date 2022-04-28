@@ -55,7 +55,7 @@ app.layout = html.Div([
                     html.H4("So what am I seeing?"),
                     html.P("-- Youtube : 100 most relevant comments each from across 10 most popular videos, "),
                     html.P("for instance, 100x10=1000 comments !"),
-                    html.P("-- Twitter: around 1000 most relevant tweets!"),
+                     html.P("-- Twitter: around 1000 most relevant tweets!"),
                     html.P("-- Reddit : 150 most relevant comments each from across 5 most active subreddits,  "),
                     html.P("for instance, 150x5=750 comments !"),
                     html.H4("What is the significance?"),
